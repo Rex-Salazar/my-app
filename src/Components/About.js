@@ -8,7 +8,7 @@ export default function About() {
         color:'white'
     }
   )
-  const [btnText,SetbtnText] = useState("Enable Dark Mode")
+  //const [btnText,SetbtnText] = useState("Enable Dark Mode")
 
   
   const Togglestyle = ()=>{
@@ -74,9 +74,6 @@ export default function About() {
     </div>
   </div>
 </div>
-<div className='container my-3'>
-        <button className='btn btn-primary' onClick={Togglestyle}>{btnText}</button>
-    </div>
     </div>
   )
 }

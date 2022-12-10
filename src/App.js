@@ -1,15 +1,15 @@
 import './App.css';
 import React,{ useState } from 'react'
-//import About from './Components/About';
+import About from './Components/About';
 import Navbar from './Components/Navbar';
 import TextForm from './Components/TextForm';
 import Alert from './Components/Alert';
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   //Link
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  //Link
+} from "react-router-dom";
 
 
 
@@ -57,22 +57,22 @@ function App() {
   }
   return (
     <>
-    {/* <Router> */}
+     <Router>
     <Navbar title = "TextUtils"  Mode = {Mode} togglemode1 = {togglemode1}/>
     <Alert alert = {alert}/>
     
     <div className='container my-3'>
-        {/* <Switch>
+        { <Switch>
               <Route exact path="/about">
                 <About />
               </Route>
               <Route exact path="/">
               </Route>
               
-        </Switch> */}
+        </Switch>}
         <TextForm showAlert = {showAlert} heading ="Enter Your Text Below"  Mode = {Mode}/>  
     </div>
-    {/* </Router> */}
+    </Router>
     </>
   );
 }
