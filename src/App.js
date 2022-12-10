@@ -22,13 +22,13 @@ function App() {
   const togglemode1 = ()=>{
     if(Mode === 'light'){
       Setmode('dark')
-      document.body.style.backgroundColor = '#6b5b95'
-      //showAlert("Purple Mode Has Been Enabled","success")
+      document.body.style.backgroundColor = 'rgb(36 74 104)'
+      showAlert("Blue Mode Has Been Enabled","success")
     }
     else{
       Setmode('light')
       document.body.style.backgroundColor = 'white'
-      //showAlert("Light Mode Has Been Enabled","success")
+      showAlert("Light Mode Has Been Enabled","success")
     }
   }
   
@@ -64,13 +64,14 @@ function App() {
     <div className='container my-3'>
         { <Switch>
               <Route exact path="/about">
-                <About />
+                <About Mode = {Mode}/>
               </Route>
               <Route exact path="/">
+              <TextForm showAlert = {showAlert} heading ="Enter Your Text Below"  Mode = {Mode}/>  
               </Route>
               
         </Switch>}
-        <TextForm showAlert = {showAlert} heading ="Enter Your Text Below"  Mode = {Mode}/>  
+        
     </div>
     </Router>
     </>
