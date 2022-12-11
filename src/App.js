@@ -19,7 +19,7 @@ function App() {
   const [alert,setAlert]= useState(null)
 
   //For button#1
-  const togglemode1 = ()=>{
+  const togglemode1 = (cls)=>{
     if(Mode === 'light'){
       Setmode('dark')
       document.body.style.backgroundColor = 'rgb(36 74 104)'
