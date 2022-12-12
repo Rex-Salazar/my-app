@@ -8,43 +8,37 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  //Link
 } from "react-router-dom";
 
 
 
 function App() {
   const [Mode,Setmode]= useState('light')
-  //const [mode,changemode]= useState('light')
   const [alert,setAlert]= useState(null)
 
-  //For button#1
-  const togglemode1 = (cls)=>{
+  // const RemoveBodySpaces = ()=>{
+  //   document.body.classList.remove('bg-light')
+  //   document.body.classList.remove('bg-dark')
+  //   document.body.classList.remove('bg-success')
+  //   document.body.classList.remove('bg-warning')
+  //   document.body.classList.remove('bg-danger')
+  // }
+
+  const togglemode1 = ()=>{
+    //RemoveBodySpaces()
+    //console.log(cls)
+    //document.body.classList.add('bg-'+ cls)
     if(Mode === 'light'){
       Setmode('dark')
       document.body.style.backgroundColor = 'rgb(36 74 104)'
-      showAlert("Blue Mode Has Been Enabled","success")
+      //showAlert("Blue Mode Has Been Enabled","success")
     }
     else{
       Setmode('light')
       document.body.style.backgroundColor = 'white'
-      showAlert("Light Mode Has Been Enabled","success")
+      //showAlert("Light Mode Has Been Enabled","success")
     }
   }
-  
-  // //For button#2
-  // const togglemode = ()=>{
-  //   if(mode === 'light'){
-  //     changemode('dark')
-  //     document.body.style.backgroundColor = '#042743'
-  //     //showAlert("Dark Mode Has Been Enabled","success")
-  //   }
-  //   else{
-  //     changemode('light')
-  //     document.body.style.backgroundColor = 'white'
-  //     //showAlert("Light Mode Has Been Enabled","success")
-  //   }
-  // }
 
   const showAlert = (message,type)=>{
     setAlert({
