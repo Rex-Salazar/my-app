@@ -13,6 +13,7 @@ import {
 
 
 function App() {
+  
   const [Mode,Setmode]= useState('light')
   const [alert,setAlert]= useState(null)
 
@@ -62,8 +63,7 @@ function App() {
               </Route>
               <Route exact path="/">
               <TextForm showAlert = {showAlert} heading ="Enter Your Text Below"  Mode = {Mode}/>  
-              </Route>
-              
+              </Route>      
         </Switch>}
         
     </div>
